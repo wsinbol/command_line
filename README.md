@@ -10,6 +10,13 @@
 - gitlab-ctl restart:
 - gitlab-ctl status: 查看 gitlab 运行环境状态
 - gitlab-ctl tail: 查看 gitlab 实施日志
+- head -1 /opt/gitlab/version-manifest.txt 查看gitlab版本
+- gitlab-ctl stop unicorn 关闭gitlab 数据连接
+- gitlab-ctl stop sidekiq 关闭 sidekiq
+- rpm -e [gitlab-ce] 卸载 gitlab
+- find / -name *gitlab*|xargs rm -rf 深度卸载
+- find / -name gitlab |xargs rm -rf  深度卸载
+
 
 ## Git
 
