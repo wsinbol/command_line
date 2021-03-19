@@ -4,18 +4,27 @@
 
 ## Gitlab
 
+- [安装参考博文](https://blog.csdn.net/unhejing/article/details/104767623)
+
 - gitlab-ctl reconfigure: 重载 gitlab 配置
 - gitlab-ctl start: 开启 gitlab
 - gitlab-ctl stop: 停用 gitlab
 - gitlab-ctl restart:
 - gitlab-ctl status: 查看 gitlab 运行环境状态
-- gitlab-ctl tail: 查看 gitlab 实施日志
+- gitlab-ctl tail: 查看 gitlab 实时日志
 - head -1 /opt/gitlab/version-manifest.txt 查看gitlab版本
 - gitlab-ctl stop unicorn 关闭gitlab 数据连接
 - gitlab-ctl stop sidekiq 关闭 sidekiq
 - rpm -e [gitlab-ce] 卸载 gitlab
 - find / -name *gitlab*|xargs rm -rf 深度卸载
 - find / -name gitlab |xargs rm -rf  深度卸载
+
+配置修改文件：
+/etc/gitlab/gitlab.rb
+
+gitlab默认备份文件：
+/var/opt/gitlab/backups
+
 
 
 ## Git
