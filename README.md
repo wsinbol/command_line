@@ -22,6 +22,18 @@
 配置修改文件：
 /etc/gitlab/gitlab.rb
 
+```
+修改访问IP：
+external_url 'http://60.205.194.237:9002'
+
+指定端口
+nginx['listen_port'] = 9002
+
+依据情况决定是否修改
+unicorn['port'] = 9191
+
+```
+
 gitlab默认备份文件：
 /var/opt/gitlab/backups
 
