@@ -50,6 +50,7 @@ gitlab默认备份文件：
 - git pull origin master
 - git checkout -b <branch_name>
 - git branch <branch_name>
+-  git rm -r --cached <filee__nnaammee>
 
 - 结合crontab命令自动push到远程仓库
 
