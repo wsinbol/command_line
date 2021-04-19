@@ -71,6 +71,32 @@ git push origin master
 > 1. 脚本中涉及文件路径时写全局路径；
 > 2. 脚本执行要用到java或其他环境变量时，通过source命令引入环境变量
 
+- 一键提交脚本
+
+```
+#!/bin/bash
+
+if [ -z "$(git status --porcelain)" ];
+then
+    echo "IT IS CLEAN"
+	exit 0
+fi
+
+echo "Enter your message"
+read message
+if [ -z "${message}" ];
+then
+	message="update"
+fi
+
+git add .
+git commit -m"${message}"
+echo "Pushing data to remote server!!!"
+git push -u origin master
+
+exit 0
+```
+
 ## Firewall
 
 ## 进程&端口
