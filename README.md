@@ -50,7 +50,8 @@ gitlab默认备份文件：
 - git pull origin master
 - git checkout -b <branch_name>
 - git branch <branch_name>
--  git rm -r --cached <filee__nnaammee>
+- git rm -r --cached <file_name> # 删除本地缓存
+- git rm -r -n --cached <文件/文件夹名称>  # 加上 -n 这个参数，执行命令时，是不会删除任何文件，而是展示此命令要删除的文件列表预览
 
 - 结合crontab命令自动push到远程仓库
 
