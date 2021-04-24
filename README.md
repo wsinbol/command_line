@@ -100,3 +100,13 @@ exit 0
 ## Firewall
 
 ## 进程&端口
+
+## FAQ
+
+1. 使用yum报错：Error: rpmdb open failed
+
+```
+rm -f /var/lib/rpm/__db*
+rpm --rebuilddb
+yum -y update
+```
