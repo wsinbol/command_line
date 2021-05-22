@@ -45,11 +45,12 @@ gitlab默认备份文件：
 - git config --blobal user.name ""
 - git add .
 - git commit -m ''
-- git remote add <remote_url>
+- git remote add <branch_name> <remote_url>
 - git push origin master
 - git push origin local-branch:remote-branch local-branch和remote-branch一般同名
 - git pull origin master
 - git checkout -b <branch_name> 新建分支并切换到该分支
+- git switch -c <branch-name> 同上
 - git branch <branch_name> 切换到某分支
 - git rm -r --cached <file_name>  删除本地缓存，取消对某文件的跟踪
 - git rm -r -n --cached <文件/文件夹名称>  # 加上 -n 这个参数，执行命令时，是不会删除任何文件，而是展示此命令要删除的文件列表预览
@@ -57,6 +58,12 @@ gitlab默认备份文件：
 - git branch -a 查看本地/远程分支
 - git push origin --delete [branch_name] 删除远程分支
 - git branch -d [branch_name] 删除本地分支
+- git branch -r -d [branch_name] 删除远程分支
+- git merge --no-ff [branch_name] 将branch_name分支合并到当前分支上
+- git cherry-pick：挑选某个分支的单次提交并作为一个新的提交引入到你当前分支上
+- git revert：撤回提交信息
+
+
 
 - 结合crontab命令自动push到远程仓库
 
