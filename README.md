@@ -2,42 +2,6 @@
 
 该项目记录各个软件的常用命令行操作及相关配置文件的默认位置，主要针对 Linux 服务器环境。
 
-## Gitlab
-
-- [安装参考博文](https://blog.csdn.net/unhejing/article/details/104767623)
-
-- gitlab-ctl reconfigure: 重载 gitlab 配置
-- gitlab-ctl start: 开启 gitlab
-- gitlab-ctl stop: 停用 gitlab
-- gitlab-ctl restart:
-- gitlab-ctl status: 查看 gitlab 运行环境状态
-- gitlab-ctl tail: 查看 gitlab 实时日志
-- head -1 /opt/gitlab/version-manifest.txt 查看gitlab版本
-- gitlab-ctl stop unicorn 关闭gitlab 数据连接
-- gitlab-ctl stop sidekiq 关闭 sidekiq
-- rpm -e [gitlab-ce] 卸载 gitlab
-- find / -name *gitlab*|xargs rm -rf 深度卸载
-- find / -name gitlab |xargs rm -rf  深度卸载
-
-配置修改文件：
-/etc/gitlab/gitlab.rb
-
-```
-修改访问IP：
-external_url 'http://60.205.194.237:9002'
-
-指定端口
-nginx['listen_port'] = 9002
-
-依据情况决定是否修改
-unicorn['port'] = 9191
-
-```
-
-gitlab默认备份文件：
-/var/opt/gitlab/backups
-
-
 
 ## Git
 
@@ -47,9 +11,13 @@ gitlab默认备份文件：
 - git commit -m ''
 - git remote add <branch_name> <remote_url>
 - git push origin master
-- git push origin local-branch:remote-branch local-branch和remote-branch一般同名
+- git push origin [local-branch]:[remote-branch] local-branch和remote-branch一般同名 （推送本地分支到远程仓库）
 - git pull origin master
+- git branch -r 查看远程的所有分支
+- git branch -a 查看本地的所有分支
+- git branch -vv 查看本地分支与远程分支的映射关系
 - git checkout -b <branch_name> 新建分支并切换到该分支
+- git checkout <branch_name> 切换到branch_name分支
 - git switch -c <branch-name> 同上
 - git branch <branch_name> 切换到某分支
 - git rm -r --cached <file_name>  删除本地缓存，取消对某文件的跟踪。执行此操作后执行git commit 才可以
@@ -62,6 +30,7 @@ gitlab默认备份文件：
 - git merge --no-ff [branch_name] 将branch_name分支合并到当前分支上
 - git cherry-pick：挑选某个分支的单次提交并作为一个新的提交引入到你当前分支上
 - git revert：撤回提交信息
+- git diff --check (git merge后检查是否还存在有带有冲突标记的文件)
 
 
 
@@ -108,6 +77,43 @@ git push -u origin master
 
 exit 0
 ```
+
+## Gitlab
+
+- [安装参考博文](https://blog.csdn.net/unhejing/article/details/104767623)
+
+- gitlab-ctl reconfigure: 重载 gitlab 配置
+- gitlab-ctl start: 开启 gitlab
+- gitlab-ctl stop: 停用 gitlab
+- gitlab-ctl restart:
+- gitlab-ctl status: 查看 gitlab 运行环境状态
+- gitlab-ctl tail: 查看 gitlab 实时日志
+- head -1 /opt/gitlab/version-manifest.txt 查看gitlab版本
+- gitlab-ctl stop unicorn 关闭gitlab 数据连接
+- gitlab-ctl stop sidekiq 关闭 sidekiq
+- rpm -e [gitlab-ce] 卸载 gitlab
+- find / -name *gitlab*|xargs rm -rf 深度卸载
+- find / -name gitlab |xargs rm -rf  深度卸载
+
+配置修改文件：
+/etc/gitlab/gitlab.rb
+
+```
+修改访问IP：
+external_url 'http://60.205.194.237:9002'
+
+指定端口
+nginx['listen_port'] = 9002
+
+依据情况决定是否修改
+unicorn['port'] = 9191
+
+```
+
+gitlab默认备份文件：
+/var/opt/gitlab/backups
+
+
 
 ## Firewall
 
