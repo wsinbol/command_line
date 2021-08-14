@@ -28,11 +28,15 @@
 - git branch -d [branch_name] 删除本地分支
 - git branch -r -d [branch_name] 删除远程分支
 - git merge --no-ff [branch_name] 将branch_name分支合并到当前分支上
-- git cherry-pick：挑选某个分支的单次提交并作为一个新的提交引入到你当前分支上
-- git revert：撤回提交信息
+- git cherry-pick [commit-id] 挑选某个分支的单次提交并作为一个新的提交引入到你当前分支上
+- git revert 撤回提交信息
 - git diff --check (git merge后检查是否还存在有带有冲突标记的文件)
 - git rebase -i HEAD~4 (合并多次提交纪录,注意不要合并先前提交的东西，也就是已经提交远程分支的纪录)
-
+- git stash 保存工作现场
+- git stash list 查看保存的现场
+- git stash pop 恢复工作现场并删除保存记录
+- git stash apply stash@{0} 恢复指定的现场
+- 
 
 
 - 精彩文章：
