@@ -31,7 +31,20 @@
 - git cherry-pick：挑选某个分支的单次提交并作为一个新的提交引入到你当前分支上
 - git revert：撤回提交信息
 - git diff --check (git merge后检查是否还存在有带有冲突标记的文件)
+- git rebase -i HEAD~4 (合并多次提交纪录,注意不要合并先前提交的东西，也就是已经提交远程分支的纪录)
 
+
+
+- 精彩文章：
+```
+https://www.ruanyifeng.com/blog/2015/08/git-use-process.html
+https://willi.am/blog/2014/08/12/the-dark-side-of-the-force-push/
+https://www.ruanyifeng.com/blog/2012/07/git.html
+
+rebase:
+http://jartto.wang/2018/12/11/git-rebase/
+
+```
 
 
 - 结合crontab命令自动push到远程仓库
