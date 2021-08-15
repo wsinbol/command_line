@@ -36,10 +36,15 @@
 - git stash list 查看保存的现场
 - git stash pop 恢复工作现场并删除保存记录
 - git stash apply stash@{0} 恢复指定的现场
-- 
 
+- 奇技淫巧
+
+```
+https://github.com/tiimgreen/github-cheat-sheet/blob/master/README.zh-cn.md#%E5%BF%AB%E9%80%9F%E5%BC%95%E7%94%A8
+```
 
 - 精彩文章：
+
 ```
 https://www.ruanyifeng.com/blog/2015/08/git-use-process.html
 https://willi.am/blog/2014/08/12/the-dark-side-of-the-force-push/
