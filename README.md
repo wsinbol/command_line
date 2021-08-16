@@ -37,6 +37,14 @@
 - git stash pop 恢复工作现场并删除保存记录
 - git stash apply stash@{0} 恢复指定的现场
 
+- 比较两次commit之间的差异文件
+
+```
+git diff hash1 hash2 --stat  
+git diff hash1 hash2 <具体的文件>
+git diff hash1 hash2 <具体的文件> > patch.txt （将两次提交的差异部分提取成补丁文件）
+```
+
 - 奇技淫巧
 
 ```
