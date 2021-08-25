@@ -37,6 +37,14 @@
 - git stash pop 恢复工作现场并删除保存记录
 - git stash apply stash@{0} 恢复指定的现场
 
+- 忽略本地修改，强制用Git仓库的代码覆盖本地代码：
+
+```
+git fetch --all
+git reset --hard origin/master
+git pull
+```
+
 - 比较两次commit之间的差异文件
 
 ```
