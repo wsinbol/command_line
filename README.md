@@ -36,6 +36,7 @@
 - git stash list 查看保存的现场
 - git stash pop 恢复工作现场并删除保存记录
 - git stash apply stash@{0} 恢复指定的现场
+- git log --graph --oneline --abbrev-commit 
 
 - 忽略本地修改，强制用Git仓库的代码覆盖本地代码：
 
