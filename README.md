@@ -152,7 +152,9 @@ unicorn['port'] = 9191
 gitlab默认备份文件：
 /var/opt/gitlab/backups
 
+## CPU&内存
 
+- ps aux --sort -rss 查看内存占用情况
 
 ## Firewall
 
