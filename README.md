@@ -162,6 +162,8 @@ gitlab默认备份文件：
 
 ## 进程&端口
 
+- netstat -anp 查看linux系统所有端口占用情况
+
 ## FAQ
 
 1. 使用yum报错：Error: rpmdb open failed
