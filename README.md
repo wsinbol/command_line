@@ -18,6 +18,8 @@
 - git branch -vv 查看本地分支与远程分支的映射关系
 - git checkout -b <branch_name> 新建分支并切换到该分支
 - git checkout <branch_name> 切换到branch_name分支
+- git checkout -- <file_name> 撤销对某个文件的修改 （当你改乱了工作区某个文件的内容，想直接丢弃工作区的修改时）
+- git reset HEAD <file> 从暂存区撤销（已经执行 git add 操作后）当你不但改乱了工作区某个文件的内容，还添加到了暂存区时，想丢弃修改
 - git switch -c <branch-name> 同上
 - git branch <branch_name> 切换到某分支
 - git rm -r --cached <file_name>  删除本地缓存，取消对某文件的跟踪。执行此操作后执行git commit 才可以
