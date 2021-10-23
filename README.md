@@ -39,6 +39,7 @@
 - git stash pop 恢复工作现场并删除保存记录
 - git stash apply stash@{0} 恢复指定的现场
 - git log --graph --oneline --abbrev-commit 
+- git branch -m master main 将master分支移到main（因为github将master分支改为main所致）
 
 - 忽略本地修改，强制用Git仓库的代码覆盖本地代码：
 
