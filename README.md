@@ -120,6 +120,21 @@ git push -u origin master
 exit 0
 ```
 
+## Docker 
+
+
+- 进入指定容器
+
+先查看容器列表，执行 `docker container ls` 取得 CONTAINER ID
+然后 docker exe -i -t <container_id> bash 
+
+
+
+
+
+
+
+
 ## Gitlab
 
 - [安装参考博文](https://blog.csdn.net/unhejing/article/details/104767623)
