@@ -128,7 +128,7 @@ exit 0
 - 进入指定容器
 
 先查看容器列表，执行 `docker container ls` 取得 CONTAINER ID
-然后 docker exe -i -t <container_id> bash 
+然后 docker exe -i -t <container_id> /bin/bash 
 
 
 
@@ -144,6 +144,9 @@ exit 0
 - gitlab-ctl reconfigure: 重载 gitlab 配置
 - gitlab-ctl start: 开启 gitlab
 - gitlab-ctl stop: 停用 gitlab
+```
+systemctl stop gitlab-runsvdir // 只执行上面的命令并不能彻底结束gitlab相关进程，遗留的进程仍占用CPU和内存
+```
 - gitlab-ctl restart:
 - gitlab-ctl status: 查看 gitlab 运行环境状态
 - gitlab-ctl tail: 查看 gitlab 实时日志
