@@ -54,6 +54,8 @@ git pull
 - 比较两次commit之间的差异文件
 
 ```
+git diff (不加参数默认比较工作区与暂存区)
+git diff --cached [file_name](比较暂存区与最新本地版本库【即本地库中最近一次commit的内容】)
 git diff hash1 hash2 --stat  
 git diff hash1 hash2 <具体的文件>
 git diff hash1 hash2 <具体的文件> > patch.txt （将两次提交的差异部分提取成补丁文件）
