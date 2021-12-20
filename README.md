@@ -17,13 +17,15 @@
 - git branch -a 查看本地的所有分支
 - git branch -vv 查看本地分支与远程分支的映射关系
 - git checkout -b <branch_name> 新建分支并切换到该分支
+- git switch -c <branch-name> 新建分支并切换到该分支
 - git checkout <branch_name> 切换到branch_name分支
 - git checkout -- <file_name> 撤销对某个文件的修改 （当你改乱了工作区某个文件的内容，想直接丢弃工作区的修改时）
 - git reset HEAD <file> 从暂存区撤销（已经执行 git add 操作后）当你不但改乱了工作区某个文件的内容，还添加到了暂存区时，想丢弃修改
-- git switch -c <branch-name> 同上
+- git reset --hard HEAD^ 回退到上一个版本 （回退到上两个版本的话用HEAD^^）
+- git reset --hard <commit-id> 回退到指定版本
 - git branch <branch_name> 切换到某分支
-- git rm -r --cached <file_name>  删除本地缓存，取消对某文件的跟踪。执行此操作后执行git commit 才可以
 - git rm -r -n --cached <文件/文件夹名称>  # 加上 -n 这个参数，执行命令时，是不会删除任何文件，而是展示此命令要删除的文件列表预览
+- git rm -r --cached <file_name>  删除本地缓存，取消对某文件的跟踪。执行此操作后执行git commit 才可以
 - git log -p [application/database.php] 显示某文件每次提交的diff
 - git branch -a 查看本地/远程分支
 - git push origin --delete [branch_name] 删除远程分支
@@ -38,7 +40,7 @@
 - git stash list 查看保存的现场
 - git stash pop 恢复工作现场并删除保存记录
 - git stash apply stash@{0} 恢复指定的现场
-- git log --graph --oneline --abbrev-commit 
+- git log --graph --oneline --abbrev-commit  可视化查看提交情况
 - git branch -m master main 将master分支移到main（因为github将master分支改为main所致）
 - git push origin --delete dev 删除远程dev分支
 - git branch -d dev 删除dev本地分支
@@ -61,7 +63,7 @@ git diff hash1 hash2 <具体的文件>
 git diff hash1 hash2 <具体的文件> > patch.txt （将两次提交的差异部分提取成补丁文件）
 ```
 
-- 奇技淫巧
+- Github使用秘籍
 
 ```
 https://github.com/tiimgreen/github-cheat-sheet/blob/master/README.zh-cn.md#%E5%BF%AB%E9%80%9F%E5%BC%95%E7%94%A8
