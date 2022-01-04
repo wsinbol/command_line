@@ -40,6 +40,7 @@
 - git stash list 查看保存的现场
 - git stash pop 恢复工作现场并删除保存记录
 - git stash apply stash@{0} 恢复指定的现场
+- git stash show -p stash@{1} 查看某个stash具体内容
 - git log --graph --oneline --abbrev-commit  可视化查看提交情况
 - git branch -m master main 将master分支移到main（因为github将master分支改为main所致）
 - git push origin --delete dev 删除远程dev分支
