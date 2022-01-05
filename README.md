@@ -165,6 +165,8 @@ systemctl stop gitlab-runsvdir // 只执行上面的命令并不能彻底结束g
 配置修改文件：
 /etc/gitlab/gitlab.rb
 
+*最新版本的gitlab已经弃用unicorn*
+
 ```
 修改访问IP：
 external_url 'http://60.205.194.237:9002'
@@ -183,6 +185,11 @@ gitlab默认备份文件：
 ## CPU&内存
 
 - ps aux --sort -rss 查看内存占用情况
+
+## Linux 文件
+
+- df -h 查看整体磁盘使用情况
+- du -ah --max-depth=1 [/] 查看指定目录各个文件夹占用情况
 
 ## Firewall
 
