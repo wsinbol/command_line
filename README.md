@@ -189,7 +189,9 @@ gitlab默认备份文件：
 ## Linux 文件
 
 - df -h 查看整体磁盘使用情况
-- du -ah --max-depth=1 [/] 查看指定目录各个文件夹占用情况
+- du -ah --max-depth=1 [/] 查看指定目录各个文件夹占用情况，默认查询当前目录
+- du -bsh [/bin/] 查看根目录下bin目录占用情况
+- find . size +500M 查找当前目录大于500M的文件
 
 ## Firewall
 
