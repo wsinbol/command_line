@@ -2,6 +2,13 @@
 
 该项目记录各个软件的常用命令行操作及相关配置文件的默认位置，主要针对 Linux 服务器环境。
 
+# Docker
+
+- docker ps
+- docker ps -a
+- docker ps -a -q 查看所有容器ID
+- docker stop $(docker ps -a -q) // stop 停止所有容器
+- docker rm $(docker ps -a -q) // stop 停止所有容器
 
 ## Git
 
