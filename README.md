@@ -17,6 +17,8 @@
 - git add .
 - git commit -m ''
 - git remote add <branch_name> <remote_url>
+- git remote -v 查看仓库地址
+- git remote rm <origin>
 - git push origin master
 - git push origin [local-branch]:[remote-branch] local-branch和remote-branch一般同名 （推送本地分支到远程仓库）
 - git pull origin master
