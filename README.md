@@ -55,6 +55,15 @@
 - git push origin --delete dev 删除远程dev分支
 - git branch -d dev 删除dev本地分支
 
+- git commit 配置提交模版
+
+```
+1. 新建 .gitmessage 文件
+2. git config --global commit.template "D:\java-project\zhongyi-cloud\.gitmessage"
+3. 输入 git commit 后回车
+4. 根据提示写内容
+```
+
 - 忽略本地修改，强制用Git仓库的代码覆盖本地代码：
 
 ```
