@@ -32,7 +32,7 @@
 - git reset HEAD <file> 从暂存区撤销（已经执行 git add 操作后）当你不但改乱了工作区某个文件的内容，还添加到了暂存区时，想丢弃修改
 - git reset --hard HEAD^ 回退到上一个版本 （回退到上两个版本的话用HEAD^^）
 - git reset --hard <commit-id> 回退到指定版本
-- git branch <branch_name> 切换到某分支
+- git branch <branch_name> 新建某分支
 - git rm -r -n --cached <文件/文件夹名称>  # 加上 -n 这个参数，执行命令时，是不会删除任何文件，而是展示此命令要删除的文件列表预览
 - git rm -r --cached <file_name>  删除本地缓存，取消对某文件的跟踪。执行此操作后执行git commit 才可以
 - git log -p [application/database.php] 显示某文件每次提交的diff
