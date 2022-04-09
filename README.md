@@ -55,6 +55,17 @@
 - git push origin --delete dev 删除远程dev分支
 - git branch -d dev 删除dev本地分支
 
+
+### git tag 相关操作
+
+- git tag [v1.0] 打标签
+- git tag 查看所有标签
+- git tag -a <tagname> -m "blablabla..." 添加备注信息并打标签
+- git tag -d [v1.0] 删除指定标签
+- git push origin [v1.0] 推送指定标签
+- git push origin --tags 推送所有标签
+- git push origin :refs/tags/[v1.0] 删除远程标签
+
 - git commit 配置提交模版
 
 ```
