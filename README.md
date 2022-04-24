@@ -38,8 +38,6 @@
 - git log -p [application/database.php] 显示某文件每次提交的diff
 - git branch -a 查看本地/远程分支
 - git push origin --delete [branch_name] 删除远程分支
-- git branch -d [branch_name] 删除本地分支
-- git branch -r -d [branch_name] 删除远程分支
 - git merge --no-ff [branch_name] 将branch_name分支合并到当前分支上
 - git cherry-pick [commit-id] 挑选某个分支的单次提交并作为一个新的提交引入到你当前分支上
 - git revert 撤回提交信息
