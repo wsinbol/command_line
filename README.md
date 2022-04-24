@@ -57,15 +57,19 @@
 
 ### 本地分支 VS 远程分支 
 
-> 在使用HTTP方式拉取代码时一定要重视这些操作，因为默认拉下来的只有 master 分支，其他分支只能自己创建并关联1
+> 在使用HTTP方式拉取代码时一定要重视这些操作，因为默认拉下来的只有 master 分支，其他分支只能自己创建并关联！
 
 ```
+
 1. git branch -r // 查看远程分支
 2. git branch -vv // 查看本地分支与远程分支的映射关系
 3. git fetch <origin> <远程分支命名>:<本地分支命名> // 将远程分支拉取到本地
 4. git checkout <本地分支命名> // 切换到新拉取的本地分支
-5. git branch -u <origin/develop> // 建立本地分支与远程分支的映射
+5. git branch -u <origin/develop> // 建立本地分支与远程分支的映射 或者使用 git branch --set-upstream-to origin/develop
 6. git branch -vv // 再次确认本地分支与远程分支映射关系
+
+- git branch --unset-upstream // 撤销本地分支与远程分支的映射关系
+
 ```
 
 
