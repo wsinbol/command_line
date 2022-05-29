@@ -1,6 +1,9 @@
 # 序
 
-目前包含 git 、gitlab 常用命令行操作
+目前包含 git 、gitlab 常用命令行操作。
+
+- [firstaidgit.io](http://firstaidgit.io/) 一个可搜索的最常被问到的Git的问题
+- [git-extra-commands](https://github.com/unixorn/git-extra-commands) - 一堆有用的额外的Git脚本
 
 # Git
 
@@ -12,6 +15,7 @@
 - git add .
 - git commit -m ''
 - git status 显示哪些文件已被staged、未被staged及未跟踪untracked
+- git checkout - 快速切换到上一个分支
 
 
 ##  合并操作
@@ -25,8 +29,9 @@
 - git checkout -- <file> 撤销对某个文件的修改 （当你改乱了工作区某个文件的内容，想直接丢弃工作区的修改时）
 - git reset <file> 将file从暂存区移除，但保持工作区不变，此操作不会修改工作区的任何文件
 - git reset HEAD <file> 从暂存区撤销（已经执行 git add 操作后）当你不但改乱了工作区某个文件的内容，还添加到了暂存区时，想丢弃修改
-- git reset --hard HEAD^ 回退到上一个版本 （回退到上两个版本的话用HEAD^^）
+- git reset --hard HEAD^ 回退到上一个版本 （回退到上两个版本的话用HEAD^^，以此类推）
 - git reset --hard <commit-id> 回退到指定版本
+- git rm --cached <file> 取消对某文件的跟踪，但保留本地文件
 - git rm -r -n --cached <文件/文件夹名称>  # 加上 -n 这个参数，执行命令时，是不会删除任何文件，而是展示此命令要删除的文件列表预览
 - git rm -r --cached <file>  删除本地缓存，取消对某文件的跟踪。执行此操作后执行git commit 才可以
 - git revert 撤回提交信息
@@ -69,9 +74,10 @@
 - git switch -c <branch-name> 新建分支并切换到该分支
 - git branch <branch_name> 新建某分支但不切换
 - git checkout <branch_name> 切换到branch_name分支
-- git branch -m master main 将master分支移到main（因为github将master分支改为main所致）
+- git branch -m <master> <main> 重命名本地分支，将master分支移到main（因为github将master分支改为main所致）
 - git push origin --delete dev 删除远程dev分支
 - git branch -d dev 删除dev本地分支
+- git branch --merged master | grep -v '^\*\|  master' | xargs -n 1 git branch -d 删除已经合并到 master 的分支
 
 
 
@@ -93,10 +99,12 @@
 - git tag [v1.0] 打标签
 - git tag 查看所有标签
 - git tag -a <tagname> -m "blablabla..." 添加备注信息并打标签
-- git tag -d [v1.0] 删除指定标签
+- git tag -d [v1.0] 删除本地标签
 - git push origin [v1.0] 推送指定标签
 - git push origin --tags 推送所有标签
 - git push origin :refs/tags/[v1.0] 删除远程标签
+- git push origin --delete tag <tagname> 删除远程标签
+- git checkout -b branch_name tag_name 回退到某个标签
 
 ------
 
@@ -142,19 +150,14 @@ git reset --hard origin/master
 git pull
 ```
 
-- 比较两次commit之间的差异文件
-
-```
-
-```
-
 - Github使用秘籍
 
 ```
 https://github.com/tiimgreen/github-cheat-sheet/blob/master/README.zh-cn.md#%E5%BF%AB%E9%80%9F%E5%BC%95%E7%94%A8
 ```
 
-- 精彩文章：
+## 参考资料
+- https://github.com/521xueweihan/git-tips#%E5%9B%9E%E5%88%B0%E8%BF%9C%E7%A8%8B%E4%BB%93%E5%BA%93%E7%9A%84%E7%8A%B6%E6%80%81
 
 ```
 https://www.ruanyifeng.com/blog/2015/08/git-use-process.html
