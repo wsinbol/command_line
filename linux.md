@@ -15,6 +15,7 @@
 ## 进程&端口
 
 - netstat -anp 查看linux系统所有端口占用情况
+- netstat -tulnp 查看系统中启动的监听服务
 
 ## FAQ
 

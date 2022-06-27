@@ -150,6 +150,13 @@ git reset --hard origin/master
 git pull
 ```
 
+- gitlab修改账户密码后提示：Authentication failed
+
+```
+打开控制面板 =》用户账户 =》 管理windows 凭据，修改对应凭据的密码即可！
+```
+
+
 - Github使用秘籍
 
 ```
@@ -166,9 +173,7 @@ https://www.ruanyifeng.com/blog/2012/07/git.html
 
 rebase:
 http://jartto.wang/2018/12/11/git-rebase/
-
 ```
-
 
 - 结合crontab命令自动push到远程仓库
 
