@@ -157,6 +157,20 @@ git pull
 ```
 
 
+- centos7解决git每次都要输入账号密码的问题
+
+```
+git config --global user.name "用户名"
+git config --global user.email "邮箱"
+find / -name .gitconfig
+在 .gitconfig 文件中加入：
+
+[credential]
+	helper = store
+
+切换到项目目录执行：git config --global credential.helper store
+```
+
 - Github使用秘籍
 
 ```
