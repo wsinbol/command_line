@@ -11,7 +11,7 @@
 - git init [directory] 初始化仓库
 - git clone <repo> 克隆远程仓库到本地
 - git config --global user.email ""
-- git config --blobal user.name ""
+- git config --global user.name ""
 - git add .
 - git commit -m ''
 - git status 显示哪些文件已被staged、未被staged及未跟踪untracked
