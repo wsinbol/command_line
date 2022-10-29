@@ -31,9 +31,9 @@
 - git reset HEAD <file> 从暂存区撤销（已经执行 git add 操作后）当你不但改乱了工作区某个文件的内容，还添加到了暂存区时，想丢弃修改
 - git reset --hard HEAD^ 回退到上一个版本 （回退到上两个版本的话用HEAD^^，以此类推）
 - git reset --hard <commit-id> 回退到指定版本
-- git rm --cached <file> 取消对某文件的跟踪，但保留本地文件
-- git rm -r -n --cached <文件/文件夹名称>  # 加上 -n 这个参数，执行命令时，是不会删除任何文件，而是展示此命令要删除的文件列表预览
+- git rm --cached <file> 取消对某文件的跟踪，但保留本地文件,执行此操作后务必执行git commit，不要执行git add (执行git add 后又重新把该文件纳入版本管理)；或者手动删除这个文件，然后再add就可以
 - git rm -r --cached <file>  删除本地缓存，取消对某文件的跟踪。执行此操作后务必执行git commit，不要执行git add 
+- git rm -r -n --cached <文件/文件夹名称>  # 加上 -n 这个参数，执行命令时，是不会删除任何文件，而是展示此命令要删除的文件列表预览
 - git revert 撤回提交信息
 - git rebase -i HEAD~4 (合并多次提交纪录,注意不要合并先前提交的东西，也就是已经提交远程分支的纪录)
 
